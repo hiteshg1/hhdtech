@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>My Website</title>
     <link rel="stylesheet" href="../newstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,20 +12,22 @@
   </head>
   <body>
   
-  <section id="head">
-  <div role="navigation" class="container-1200-nav">
-    <nav class="nav">
-      <img class="logo" src="../assets/logo.png" height="100px">
-      <div class="nav-links">
-        <div><a href="../index.html" alt="">HOME</a></div>
-        <div><a href="#" alt="">SERVICES</a></div>
-        <div><a href="../public/bee.html" alt="">BEE</a></div>
-        <div><a href="../public/contact.html" alt="">CONTACT US</a></div>
-    </div>
-      
-    </nav>
-  </div>
-</section>
+    <section id="head">
+      <div role="navigation" class="container-1200-nav">
+        <nav class="nav">
+            <img class="logo" src="../assets/logo.png" height="100px">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <img class="ham-icon" src="../assets/hamburger-icon.png" alt="">
+            </div>
+            <div class="nav-links" id="navLinks">
+                <div><a href="../index.html" alt="">HOME</a></div>
+                <div><a href="#" alt="">SERVICES</a></div>
+                <div><a href="bee.html" alt="">BEE</a></div>
+                <div><a href="contact.html" alt="">CONTACT US</a></div>
+            </div>
+        </nav>
+      </div>
+    </section>
 
 <section id="">
     <div  class="container-1200">
@@ -70,11 +73,10 @@
 <section id="it-support">
   <div  class="container-1200 h-paragraph">
     <div class="it-paragraph">
-      <div>
         <h1 class="footer-title">IT SUPPORT</h1>
         <p>In addition to the Hardware Product Offering, we provide IT Support for businesses. We offer a fixed or hourly fee bundled with our pro-active Network Monitoring Service.</p><br>
         <h4 class="hhd">Our IT Support include:</h4>
-        <ul>
+        <ul class="it-list">
             <li class="hhd2">Microsoft desktop, server and Small Business Server support</li>
             <li class="hhd2">Remote IT Support - we can login and support you no matter where you are</li>
             <li class="hhd2">Hosted Exchange</li>
@@ -86,7 +88,6 @@
             <li class="hhd2">Pro-active IT support which reduces the need for costly reactions after a problem occurs</li>
             <li class="hhd2">Vendor Management where we become the single point of contact for all of your IT related vendor issues</li>
         </ul>
-      </div>
     </div>
   </div>
   <br>
@@ -100,7 +101,7 @@
         <h4 class="hhd">ICT Sector Strategy Development</h4>
         <p>ICT is an enabler across all economic sectors, in both the private and public sectors. Although ICT is a sector on its own, it is nevertheless a cross-cutting sector providing technology-enabling solutions to support business value chains. Our uniqueness arises from our understanding of organizational processes, from which we are able to develop ICT strategies to support these organizational processes, and to integrate these processes into socio-economic programmes, developmental programmes, and mainstream economies.</p><br>
         <h4 class="hhd">We offer a wide range of business solutions and services</h4>
-        <ul>
+        <ul class="it-list">
             <li class="hhd2">Strategy Planning</li>
             <li class="hhd2">Enterprise ICT Architecture</li>
             <li class="hhd2">Business Consulting Services</li>
@@ -118,21 +119,20 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <footer class="footer-background">
   <div>
     <h1 class="footer-H1">Your Empowered <span>Technology</span> Partner</h1>
   </div>
-  <p class="footer">&copy; Copyright 2014 HHD Technologies. All rights reserved.</p>
+  <p class="footer">&copy; Copyright 2014 HHD Technologies.</p>
+  <p class="footer">All rights reserved.</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>

@@ -4,26 +4,30 @@
     <meta charset="utf-8">
     <title>My Website</title>
     <link rel="stylesheet" href="../newstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   </head>
   <body>
-  
-  <section id="head">
-  <div role="navigation" class="container-1200-nav">
-    <nav class="nav">
-      <img class="logo" src="../assets/logo.png" height="100px">
-      <div class="nav-links">
-        <div><a href="../index.html" alt="">HOME</a></div>
-        <div><a href="../public/services.html" alt="">SERVICES</a></div>
-        <div><a href="../public/bee.html" alt="">BEE</a></div>
-        <div><a href="#" alt="">CONTACT US</a></div>
-    </div>
-    </nav>
-  </div>
-</section>
+
+<section id="head">
+      <div role="navigation" class="container-1200-nav">
+        <nav class="nav">
+            <img class="logo" src="../assets/logo.png" height="100px">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <img class="ham-icon" src="../assets/hamburger-icon.png" alt="">
+            </div>
+            <div class="nav-links" id="navLinks">
+              <div><a href="../index.html" alt="">HOME</a></div>
+                <div><a href="services.html" alt="">SERVICES</a></div>
+                <div><a href="bee.html" alt="">BEE</a></div>
+                <div><a href="#" alt="">CONTACT US</a></div>
+            </div>
+        </nav>
+      </div>
+    </section>
 
 <section id="">
   <div  class="container-1200">
@@ -85,8 +89,16 @@
   <div>
     <h1 class="footer-H1">Your Empowered <span>Technology</span> Partner</h1>
   </div>
-  <p class="footer">&copy; Copyright 2014 HHD Technologies. All rights reserved.</p>
+  <p class="footer">&copy; Copyright 2014 HHD Technologies.</p>
+  <p class="footer">All rights reserved.</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
